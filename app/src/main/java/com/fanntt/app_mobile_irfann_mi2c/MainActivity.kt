@@ -48,8 +48,6 @@ class MainActivity : AppCompatActivity() {
 
         btnClick.setOnClickListener(){
             Toast.makeText(this, "Anda klik button ini!", Toast.LENGTH_SHORT).show()
-
-            txtWelcome.setText("Selamat Datang di Pemrograman Mobile Kotlin MI 2C")
         }
 
         btnMenuPage2.setOnClickListener(){
