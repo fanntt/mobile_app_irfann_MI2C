@@ -11,6 +11,7 @@ import androidx.core.view.WindowInsetsCompat
 
 class ListViewActivity : AppCompatActivity() {
     private lateinit var  lv_data : ListView
+    private lateinit var getActivity: DetailListView
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()

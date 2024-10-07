@@ -1,27 +1,33 @@
 package com.fanntt.app_mobile_irfann_mi2c
 
 import android.os.Bundle
+import android.widget.ImageView
+import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import androidx.recyclerview.widget.GridLayoutManager
-import androidx.recyclerview.widget.RecyclerView
-import com.fanntt.app_mobile_irfann_mi2c.adapter.BuahAdapter
-import com.fanntt.app_mobile_irfann_mi2c.model.MockList
-import com.fanntt.app_mobile_irfann_mi2c.model.ModelBuah
 
-class RecycleBuahActivity : AppCompatActivity() {
-    private lateinit var rv_buah : RecyclerView
+class DetailMovie : AppCompatActivity() {
+
+    private lateinit var txtDetailMovie: TextView
+    private lateinit var imgDetailMovie : ImageView
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        setContentView(R.layout.activity_recycle_buah)
-        rv_buah = findViewById(R.id.rv_buah)
+        setContentView(R.layout.activity_detail_movie)
 
-        rv_buah.layoutManager = GridLayoutManager(this, 1)
-        val adapter = BuahAdapter(MockList.getModel() as ArrayList<ModelBuah>, this)
-        rv_buah.adapter = adapter
+        txtDetailMovie=findViewById(R.id.detailMovieText)
+        imgDetailMovie=findViewById(R.id.detailMovieImage)
+
+        //get Data
+        val detailText = intent.getStringExtra("title")
+        val detailImg = intent.getIntExtra("image",0)
+
+        //untuk memindahkan data
+        txtDetailMovie.setText(detailText)
+        imgDetailMovie.setImageResource(detailImg)
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
