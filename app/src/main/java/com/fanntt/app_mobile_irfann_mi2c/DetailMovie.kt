@@ -8,6 +8,9 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 
+
+
+
 class DetailMovie : AppCompatActivity() {
 
     private lateinit var txtDetailMovie: TextView
