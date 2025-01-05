@@ -13,17 +13,6 @@
         android:orientation="vertical"
         android:background="@drawable/wallpaperhp">
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center|center_horizontal"
-            android:layout_marginTop="85sp"
-            android:text="Hello fanntt!!"
-            android:textAlignment="center"
-            android:textColor="#FFFFFF"
-            android:textSize="34sp"
-            android:textStyle="bold" />
-
         <Button
             android:id="@+id/btnClickHere"
             android:layout_width="200sp"
